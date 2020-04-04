@@ -6,158 +6,287 @@
 			<property name="Material" value="MresourceScrapIron"/>
 			<property name="CustomIcon" value="resourceBulletCasing"/>
 		</item>
+
 		<item name="9mm SC Ammo">
-			<property name="Extends" value="ammo9mmBulletBall"/>
+			<property name="Tags" value="ammo"/>
+			<property name="DisplayType" value="SC Ammo"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="MeltTimePerUnit" value=".4"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="Stacknumber" value="300"/>
 			<property name="CustomIconTint" value="70,150,70"/>
 			<property name="CustomIcon" value="ammo9mmBulletBall"/>
 			<property name="Material" value="MresourceScrapIron"/>
-			<effect_group tiered="false">
+			<property name="EconomicValue" value="4"/>
+			<effect_group name="9mm SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="32"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
 				<display_value name="dDegradationPerUse" value=".3"/>
 			</effect_group>
 		</item>
 		<item name="AP 9mm SC Ammo">
-			<property name="Extends" value="ammo9mmBulletAP"/>
+			<property name="Extends" value="9mm SC Ammo"/>
 			<property name="CustomIcon" value="ammo9mmBulletAP"/>
-			<property name="CustomIconTint" value="70,150,70"/>
-			<property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="DisplayType" value="AP SC Ammo"/>
+			<property name="EconomicValue" value="7"/>
+			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
+			<property name="UnlockedBy" value="perkPistolPeteAPAmmo"/>
+			<effect_group name="AP 9mm SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="32"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="8"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
+				<display_value name="dTargetArmor" value="-.2"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<display_value name="dTargetPenetration" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+			</effect_group>
 		</item>
 		<item name="HP 9mm SC Ammo">
-                        <property name="Extends" value="ammo9mmBulletHP"/>
-                        <property name="CustomIcon" value="ammo9mmBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="9mm SC Ammo"/>
+			<property name="CustomIcon" value="ammo9mmBulletHP"/>
+			<property name="DisplayType" value="HP SC Ammo"/>
+			<property name="EconomicValue" value="7"/>
+			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
+			<property name="UnlockedBy" value="perkPistolPeteHPAmmo"/>
+			<effect_group name="HP 9mm SC Ammo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="41.6"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="3"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="1"/>
+				<display_value name="dTargetArmor" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+			</effect_group>
 		</item>
+
 		<item name="7.62mm SC Ammo">
-                        <property name="Extends" value="ammo762mmBulletBall"/>
-                        <property name="CustomIcon" value="ammo762mmBulletBall"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="9mm SC Ammo"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="DisplayType" value="SC Ammo"/>
+			<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+			<property name="EconomicValue" value="5"/>
+			<effect_group name="7.62mm SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="50"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="8"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+			</effect_group>
 		</item>
 		<item name="AP 7.62mm SC Ammo">
-                        <property name="Extends" value="ammo762mmBulletAP"/>
-                        <property name="CustomIcon" value="ammo762mmBulletAP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="7.62mm SC Ammo"/>
+			<property name="CustomIcon" value="ammo762mmBulletAP"/>
+			<property name="DisplayType" value="AP SC Ammo"/>
+			<property name="EconomicValue" value="8"/>
+			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
+			<property name="UnlockedBy" value="perkSniperAPAmmo"/>
+			<effect_group name="AP 7.62mm SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="50"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="9"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
+				<display_value name="dTargetArmor" value="-.2"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<display_value name="dTargetPenetration" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+			</effect_group>
 		</item>
 		<item name="HP 7.62mm SC Ammo">
-                        <property name="Extends" value="ammo762mmBulletHP"/>
-                        <property name="CustomIcon" value="ammo762mmBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="7.62mm SC Ammo"/>
+			<property name="CustomIcon" value="ammo762mmBulletHP"/>
+			<property name="DisplayType" value="HP SC Ammo"/>
+			<property name="EconomicValue" value="8"/>
+			<property name="DescriptionKey" value="ammoHPGroupDesc"/>
+			<property name="UnlockedBy" value="perkSniperHPAmmo"/>
+			<effect_group name="HP 7.62mm SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="65"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="4"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="1"/>
+				<display_value name="dTargetArmor" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+			</effect_group>
 		</item>
+
 		<item name="44 Magnum SC Ammo">
-                        <property name="Extends" value="ammo44MagnumBulletBall"/>
-                        <property name="CustomIcon" value="ammo44MagnumBulletBall"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="9mm SC Ammo"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
+			<property name="DisplayType" value="SC Ammo"/>
+			<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+			<property name="EconomicValue" value="5"/>
+			<effect_group name="44 Magnum SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="65"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="12"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
+				</passive_effect>
+			</effect_group>
 		</item>
 		<item name="AP 44 Magnum SC Ammo">
-                        <property name="Extends" value="ammo44MagnumBulletAP"/>
-                        <property name="CustomIcon" value="ammo44MagnumBulletAP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="44 Magnum SC Ammo"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletAP"/>
+			<property name="DisplayType" value="AP SC Ammo"/>
+			<property name="EconomicValue" value="7"/>
+			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
+			<property name="UnlockedBy" value="perkEnforcerAPAmmo"/>
+			<effect_group name="AP 44 Magnum SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="80"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="14"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
+				<display_value name="dTargetArmor" value="-.2"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<display_value name="dTargetPenetration" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+			</effect_group>
 		</item>
 		<item name="HP 44 Magnum SC Ammo">
-                        <property name="Extends" value="ammo44MagnumBulletHP"/>
-                        <property name="CustomIcon" value="ammo44MagnumBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property name="Material" value="MresourceScrapIron"/>
-                        <effect_group tiered="false">
-                                <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger"/>
-                                <display_value name="dDegradationPerUse" value=".3"/>
-                        </effect_group>
+			<property name="Extends" value="44 Magnum SC Ammo"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletHP"/>
+			<property name="DisplayType" value="HP SC Ammo"/>
+			<property name="EconomicValue" value="7"/>
+			<property name="DescriptionKey" value="ammoHPGroupDesc"/>
+			<property name="UnlockedBy" value="perkEnforcerHPAmmo"/>
+			<effect_group name="HP 44 Magnum SC Ammo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="84.5"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkDeadEye,perkMachineGunner"/>
+				<display_value name="dDegradationPerUse" value=".3"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="1"/>
+				<display_value name="dTargetArmor" value="1"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
+				</passive_effect>
+			</effect_group>
 		</item>
+
+		<!-- Boxes of SC Ammo not working. Does not actually give the created items to player. WIP -->
+		<!-- Possible game bug? Works when Create_item name doesn't include spaces in name. -->
+		<!-- Also notice that created items are not scrappable? this was determined through troubleshooting
+		     using code which has been removed. To test, create a copy of 9mm SC Ammo with the item name 9mmSCAmmo, then use that item as the create target. The item will be created but will be non-scrappable. -->
+		<!-- Temporary workaround is to modify the recipe to give 100 SC ammo instead of giving boxes of ammo -->
+		<!-- Requires further investigation -->
+
 		<item name="Box of 9mm SC Ammo (100)">
-			<property name="Extends" value="ammoBundle9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo9mmBulletBall"/>
 			<property name="CustomIconTint" value="70,150,70"/>
+			<property name="TintColor" value="70,150,70"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="ammoBundleGroupDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="5"/> <!-- STK ammobundle -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="400"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="UnlockedBy" value="perkPistolPeteComplete"/>
 			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
 				<property name="Create_item" value="9mm SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
+		</item>
+		<item name="Box of HP 9mm SC Ammo (100)">
+			<property name="Extends" value="Box of 9mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo9mmBulletHP"/>
+			<property name="EconomicValue" value="700"/>
+			<property class="Action0">
+				<property name="Create_item" value="HP 9mm SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
 			</property>
 		</item>
 		<item name="Box of AP 9mm SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle9mmBulletAP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="AP 9mm SC Ammo"/>
-                        </property>
+			<property name="Extends" value="Box of 9mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo9mmBulletAP"/>
+			<property name="EconomicValue" value="700"/>
+			<property class="Action0">
+				<property name="Create_item" value="AP 9mm SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
 		</item>
-		<item name="Box of HP 9mm SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle9mmBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="HP 9mm SC Ammo"/>
-                        </property>
+
+		<item name="Box of 44 Magnum SC Ammo (100)">
+			<property name="Extends" value="Box of 9mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="UnlockedBy" value="perkEnforcerComplete"/>
+			<property class="Action0">
+				<property name="Create_item" value="44 Magnum SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
 		</item>
-		<item name="Box of 7.62 SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle762mmBulletBall"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="7.62mm SC Ammo"/>
-                        </property>
+		<item name="Box of HP 44 Magnum SC Ammo (100)">
+			<property name="Extends" value="Box of 44 Magnum SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletHP"/>
+			<property name="EconomicValue" value="750"/>
+			<property class="Action0">
+				<property name="Create_item" value="HP 44 Magnum SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
 		</item>
-                <item name="Box of AP 7.62 SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle762mmBulletAP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="AP 7.62mm SC Ammo"/>
-                        </property>
-                </item>
-                <item name="Box of HP 7.62 SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle762mmBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="HP 7.62mm SC Ammo"/>
-                        </property>
-                </item>
-                <item name="Box of 44 Magnum SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle44MagnumBulletBall"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="44 Magnum SC Ammo"/>
-                        </property>
-                </item>
-                <item name="Box of AP 44 Magnum SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle44MagnumBulletAP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="AP 44 Magnum SC Ammo"/>
-                        </property>
-                </item>
-                <item name="Box of HP 44 Magnum SC Ammo (100)">
-                        <property name="Extends" value="ammoBundle44MagnumBulletHP"/>
-                        <property name="CustomIconTint" value="70,150,70"/>
-                        <property class="Action0">
-                                <property name="Create_item" value="HP 44 Magnum SC Ammo"/>
-                        </property>
-                </item>
+		<item name="Box of AP 44 Magnum SC Ammo (100)">
+			<property name="Extends" value="Box of 44 Magnum SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletAP"/>
+			<property name="EconomicValue" value="750"/>
+			<property class="Action0">
+				<property name="Create_item" value="AP 44 Magnum SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
+		</item>
+
+		<item name="Box of 7.62mm SC Ammo (100)">
+			<property name="Extends" value="Box of 9mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="EconomicValue" value="550"/>
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+			<property class="Action0">
+				<property name="Create_item" value="ammo762mmSteelBall"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
+		</item>
+		<item name="Box of HP 7.62mm SC Ammo (100)">
+			<property name="Extends" value="Box of 7.62mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo762mmBulletHp"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+			<property class="Action0">
+				<property name="Create_item" value="HP 7.62mm SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
+		</item>
+		<item name="Box of AP 7.62mm SC Ammo (100)">
+			<property name="Extends" value="Box of 7.62mm SC Ammo (100)"/>
+			<property name="CustomIcon" value="ammo762mmBulletAP"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+			<property class="Action0">
+				<property name="Create_item" value="AP 7.62mm SC Ammo"/>
+				<property name="Create_item_count" value="100"/>
+			</property>
+		</item>
 	</append>
+	<append xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items' and contains(@value, '9mmBulletAP')]/@value">,9mm SC Ammo,AP 9mm SC Ammo,HP 9mm SC Ammo</append>
+	<append xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items' and contains(@value, '44MagnumBulletAP')]/@value">,44 Magnum SC Ammo,AP 44 Magnum SC Ammo,HP 44 Magnum SC Ammo</append>
+	<append xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items' and contains(@value, '762mmBulletAP')]/@value">,7.62mm SC Ammo,AP 7.62mm SC Ammo,HP 7.62mm SC Ammo</append>
 </configs>

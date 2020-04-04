@@ -1,0 +1,27 @@
+<configs>
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="SC Ammo" display_group="groupAmmo">
+			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dDegradationPerUse" title_key="statDegradationPerUse" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="SC Fake Ammo" display_group="groupAmmo">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged"/>
+			<display_entry name="dBlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dDegradationPerUse" title_key="statDegradationPerUse" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="AP SC Ammo" display_group="groupAmmo">
+			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+			<display_entry name="dTargetArmor" title_key="statTargetArmor" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+			<display_entry name="dTargetPentration" title_key="statTargetPenetration"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dDegradationPerUse" title_key="statDegradationPerUse" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="HP SC Ammo" display_group="groupAmmo">
+			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+			<display_entry name="dTargetArmor" title_key="statTargetArmor" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dDegradationPerUse" title_key="statDegradationPerUse" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+	</append>
+</configs>

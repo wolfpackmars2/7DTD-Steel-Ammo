@@ -21,14 +21,14 @@
 		<item name="9mm SC Ammo" count="200" loot_prob_template="GradeALoot"/>
 		<item name="HP 9mm SC Ammo" count="100" loot_prob_template="GradeBLoot"/>
 		<item name="AP 9mm SC Ammo" count="100" loot_prob_template="GradeCLoot"/>
+		
+		<item name="7.62mm SC Ammo" count="120" loot_prob_template="GradeALoot"/>
+		<item name="HP 7.62mm SC Ammo" count="90" loot_prob_template="GradeBLoot"/>
+		<item name="AP 7.62mm SC Ammo" count="90" loot_prob_template="GradeCLoot"/>
 
-                <item name="7.62mm SC Ammo" count="120" loot_prob_template="GradeALoot"/>
-                <item name="HP 7.62mm SC Ammo" count="90" loot_prob_template="GradeBLoot"/>
-                <item name="AP 7.62mm SC Ammo" count="90" loot_prob_template="GradeCLoot"/>
-
-                <item name="44 Magnum SC Ammo" count="150" loot_prob_template="GradeALoot"/>
-                <item name="HP 44 Magnum SC Ammo" count="100" loot_prob_template="GradeBLoot"/>
-                <item name="AP 44 Magnum SC Ammo" count="100" loot_prob_template="GradeCLoot"/>
+		<item name="44 Magnum SC Ammo" count="150" loot_prob_template="GradeALoot"/>
+		<item name="HP 44 Magnum SC Ammo" count="100" loot_prob_template="GradeBLoot"/>
+		<item name="AP 44 Magnum SC Ammo" count="100" loot_prob_template="GradeCLoot"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoRegularGunslinger']">
@@ -41,7 +41,7 @@
 		<item name="7.62mm SC Ammo" count="6,30"/>
 	</append>
 
-	<append xpath="lootcontainers/lootgroup[@name='groupAmmoAdvancedGunslinger">
+	<append xpath="lootcontainers/lootgroup[@name='groupAmmoAdvancedGunslinger']">
 		<item name="AP 9mm SC Ammo" count="10,40" loot_prob_template="T2"/>
 		<item name="HP 9mm SC Ammo" count="7,30" loot_prob_template="T2"/>
 		<item name="AP 9mm SC Ammo" count="10,40" loot_prob_template="T3"/>
